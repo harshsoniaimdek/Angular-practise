@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular_tutorials';
+  title = 'World';
+  data = "Code of Angular tutorials"
+  count = 0
+  counter() {
+    this.count++
+  }
 }
