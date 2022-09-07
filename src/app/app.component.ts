@@ -7,13 +7,11 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'World';
-  userData: any={};
-  count = 0
-  counter() {
-    this.count++
+  list : any[]=[];
+  addTask(item:string) {
+    this.list.push({id:this.list.length,name:item})
   }
-  getData(data:NgForm) {
-    console.warn(data)
-    this.userData=data
+  removeTask(id:number){
+    this.list=this.list.filter(item=>item.id!==id)
   }
 }
