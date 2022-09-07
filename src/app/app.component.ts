@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'World';
-  data = "Code of Angular tutorials"
+  userData: any={};
   count = 0
   counter() {
     this.count++
+  }
+  getData(data:NgForm) {
+    console.warn(data)
+    this.userData=data
   }
 }

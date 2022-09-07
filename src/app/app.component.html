@@ -1,3 +1,18 @@
 <h1>Hello Angular {{title}}</h1>
 <p>Count : {{count}}</p>
 <button (click)="counter()">++</button>
+<form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)" >
+  <input type="text" ngModel name="user" placeholder="Enter your name" />
+  <br /><br />
+  <input type="text" ngModel name="email" placeholder="Enter your email" />
+  <br /><br />
+  <input type="text" ngModel name="password" placeholder="Enter your password" />
+  <br /><br />
+  <button>Register yourself</button>
+</form>
+
+<ul>
+  <li>{{userData.user}}</li>
+  <li>{{userData.email}}</li>
+  <li>{{userData.password}}</li>
+</ul>
